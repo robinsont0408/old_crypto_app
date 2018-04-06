@@ -1,7 +1,30 @@
-<h3>Crypto Currency lookup</h3>
-<br/>
+<a name="Lookup"></a>
+<div class="lookup-header">
+    <div class="container">
 
-<%= form_tag home_lookup_path, :method => 'Post' do %>
-  <%= text_field_tag 'sym', nil, placeholder: 'Enter Crypto Symbol', size: 50 %>
-  <%= submit_tag 'Lookup Stock Quote' %>
-<%= end %>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>Crypto Currency lookup</h1>
+                    <h3>Look up Crypto Currency market value</h3>
+                    <hr class="intro-divider">
+                    <%= form_tag page_path('lookup'), :method => 'Post' do %>
+                      <%= text_field_tag 'sym', nil, placeholder: 'Enter Crypto Symbol', size: 50 %>
+                      <%= submit_tag 'Lookup Current Value', class: "hover" %>
+                    <% end %>
+                    
+                    <br/><br/>
+                    <% if @symbol %>
+                        <% for x in @lookup_coin %>
+                            <% if @symbol == x["symbol"] %>
+                                <%= x["name"] %>: $<%= x["price_usd"] %><br/>
+                                Rank: <%= x["rank"] %><br/><br/>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

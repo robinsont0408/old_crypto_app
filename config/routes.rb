@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     resources :users
     root to: "users#index"
   end
-#   get 'home/about'    
-  get 'home/lookup'
+  get 'pages/about'    
+  get 'pages/lookup'
+  post "/pages/lookup" => 'pages/lookup'
   root to: 'visitors#index'
   devise_for :users
   resources :users

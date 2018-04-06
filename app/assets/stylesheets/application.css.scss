@@ -13,3 +13,33 @@
  *= require_tree .
  *= require_self
  */
+.btn:hover
+{
+background-image:none !important;
+background-color:#665801 !important;
+}
+.about-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(cryptocurrency_1.jpg) no-repeat center center;
+    background-size: cover;
+}
+.intro-header::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+  margin-top: -150px;
+  height: 150px;
+  width: 100%;
+  content: '';
+}
+.lookup-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #020202;
+//     background: url(cryptocurrency_6.jpg) no-repeat center center;
+    background-size: cover;
+}
